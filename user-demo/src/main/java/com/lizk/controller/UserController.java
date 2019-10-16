@@ -34,6 +34,11 @@ public class UserController {
     }
 
 
+    /**
+     * 查询所有用户信息
+     * @param ids
+     * @return
+     */
     @ApiOperation(value="查询所有用户信息" ,notes = "查询所有用户信息")
     @GetMapping("/getUserAll")
     public List<String> getUserAll(@RequestParam List<Integer> ids){
