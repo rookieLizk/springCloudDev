@@ -1,0 +1,24 @@
+feign:
+  hystrix:
+    enabled: true
+
+server:
+  port: 9082
+spring:
+  application:
+    name: lizk-order
+#eureka 基本信息
+eureka:
+#  instance:
+#    #注册到eurekaIP地址
+#    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8888/eureka/ # 设置与Eureka Server交互的地址，查询服务和注册服务都需要依赖这个地址。
+    register-with-eureka: true # 是否将自己注册到Eureka Server，默认为true。
+    fetch-registry: true # 表示是否从Eureka Sever获取注册信息，默认为true。
+
+#负载均衡的规则，表示加权规则，yml配置优先级第一，代码第二，默认的最后
+lizk-user:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule

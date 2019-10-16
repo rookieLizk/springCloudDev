@@ -1,0 +1,22 @@
+server:
+  port: 9102
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/lizk0517/config-server-demo.git
+          search-paths: /**
+          username:
+          password:
+      label: master
+
+eureka:
+  #  instance:
+  #    #注册到eurekaIP地址
+  #    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8888/eureka/ # 设置与Eureka Server交互的地址，查询服务和注册服务都需要依赖这个地址。
