@@ -17,6 +17,11 @@ public class UserController {
     @Value("${server.port}")
     private int port;
 
+    /**
+     * 根据用户id查询用户信息
+     * @param id
+     * @return
+     */
 //    @RequestMapping("/user/{id}")
     @ApiOperation(value="根据用户id查询用户信息" ,notes = "根据用户id查询用户信息")
     @GetMapping("/user/{id}")
