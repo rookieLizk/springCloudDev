@@ -30,7 +30,7 @@ public class SwaggerConfig {
         return new ApiInfoBuilder()
                 .title("用户系统api")
                 .description("用户系统接口文档说明")
-                .contact(new springfox.documentation.service.Contact("springCloudApi", "http://www.yidiankt.com", "rookie_lizk@sina.com"))
+                .contact(new springfox.documentation.service.Contact("springCloudApi", "http://www.baidu.com", "rookie_lizk@sina.com"))
                 .version("1.0")
                 .build();
     }
